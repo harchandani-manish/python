@@ -1,0 +1,15 @@
+d = input("Please insert a number: ")
+
+def sumofDigit(number):
+    def sumdigit(digit):
+        sum = 0
+        for num in digit:
+            sum = sum + int(num)
+        return sum
+    s = sumdigit(d)
+
+    while int(len(str(s))) > 1:
+        s = sumdigit(str(s))
+    return s
+
+print(sumofDigit(d))
